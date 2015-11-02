@@ -12,128 +12,145 @@ td{
 </style>
 </head>
 <body>
+<script>
+function allow(event){
+    console.log(event);
+    event.preventDefault();
+}
+
+function drag(event){
+	event.dataTransfer.setData("text", event.target.id);
+}
+
+function drop(event){
+	event.preventDefault();
+	var data=event.dataTransfer.getData("text");
+	event.target.appendChild(O(data));
+}
+</script>
+
 <center><h1 style="font-family:Arial; color:Blue">Play chess with yourself!</h1></center>
 <br>
 <center><table style="border:solid #c4731c 1px" cellspacing = 0px>
 <tr>
-<td></td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td></td>
+<td ></td>
+<td >A</td>
+<td >B</td>
+<td >C</td>
+<td >D</td>
+<td >E</td>
+<td >F</td>
+<td >G</td>
+<td >H</td>
+<td ></td>
 </tr>
 <tr>
 <tr>
-<td>8</td>
-<td id='A8'><span style="font-size:150%" draggable="true"><b>&#9820;</b></span></td>
-<td bgcolor="#c4731c" id='B8'><span style="font-size:150%" draggable="true"><b>&#9822;</b></span></td>
-<td id='C8'><span style="font-size:150%" draggable="true"><b>&#9821;</b></span></td>
-<td bgcolor="#c4731c" id='D8'><span style="font-size:150%" draggable="true"><b>&#9818;</b></span></td>
-<td id='E8'><span style="font-size:150%" draggable="true"><b>&#9819;</b></span></td>
-<td bgcolor="#c4731c" id='F8'><span style="font-size:150%" draggable="true"><b>&#9821;</b></span></td>
-<td id='G8'><span style="font-size:150%" draggable="true"><b>&#9822;</b></span></td>
-<td bgcolor="#c4731c" id='H8'><span style="font-size:150%" draggable="true"><b>&#9820;</b></span></td>
-<td>8</td>
+<td >8</td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='A8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9820;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='B8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9822;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='C8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9821;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9818;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='E8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9819;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='F8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9821;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='G8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9822;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='H8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9820;</b></span></td>
+<td >8</td>
 </tr>
 <tr>
 <tr>
-<td>7</td>
-<td bgcolor="#c4731c" id='A7'><span style="font-size:150%" draggable="true"><b>&#9823;</b></span></td>
-<td id='B7'><span style="font-size:150%" draggable="true"><b>&#9823;</b></span></td>
-<td bgcolor="#c4731c" id='C7'><span style="font-size:150%" draggable="true"><b>&#9823;</b></span></td>
-<td id='D7'><span style="font-size:150%" draggable="true"><b>&#9823;</b></span></td>
-<td bgcolor="#c4731c" id='E7'><span style="font-size:150%" draggable="true"><b>&#9823;</b></span></td>
-<td id='F7'><span style="font-size:150%" draggable="true"><b>&#9823;</b></span></td>
-<td bgcolor="#c4731c" id='G7'><span style="font-size:150%" draggable="true"><b>&#9823;</b></span></td>
-<td id='H7'><span style="font-size:150%" draggable="true"><b>&#9823;</b></span></td>
-<td>7</td>
+<td >7</td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='A7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='B7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='C7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='D7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='E7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='F7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='G7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='H7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td >7</td>
 </tr>
-<td>6</td>
-<td id='A6'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='B6'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='C6'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='D6'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='E6'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='F6'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='G6'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='H6'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td>6</td>
-</tr>
-<tr>
-<tr>
-<td>5</td>
-<td bgcolor="#c4731c" id='A5'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='B5'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='C5'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='D5'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='E5'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='F5'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='G5'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='H5'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td>5</td>
+<td >6</td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='A6'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='B6'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='C6'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D6'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='E6'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='F6'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='G6'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='H6'></td>
+<td >6</td>
 </tr>
 <tr>
-<td>4</td>
-<td id='A4'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='B4'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='C4'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='D4'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='E4'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='F4'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='G4'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='H4'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td>4</td>
+<tr>
+<td >5</td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='A5'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='B5'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='C5'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='D5'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='E5'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='F5'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='G5'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='H5'></td>
+<td >5</td>
 </tr>
 <tr>
-<td>3</td>
-<td bgcolor="#c4731c" id='A3'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='B3'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='C3'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='D3'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='E3'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='F3'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td bgcolor="#c4731c" id='G3'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td id='H3'><span style="font-size:150%" draggable="true"><b></b></span></td>
-<td>3</td>
-</tr>
-<td>2</td>
-<td id='A2'><span style="font-size:150%" draggable="true"><b>&#9817;</b></span></td>
-<td bgcolor="#c4731c" id='B2'><span style="font-size:150%" draggable="true"><b>&#9817;</b></span></td>
-<td id='C2'><span style="font-size:150%" draggable="true"><b>&#9817;</b></span></td>
-<td bgcolor="#c4731c" id='D2'><span style="font-size:150%" draggable="true"><b>&#9817;</b></span></td>
-<td id='E2'><span style="font-size:150%" draggable="true"><b>&#9817;</b></span></td>
-<td bgcolor="#c4731c" id='F2'><span style="font-size:150%" draggable="true"><b>&#9817;</b></span></td>
-<td id='G2'><span style="font-size:150%" draggable="true"><b>&#9817;</b></span></td>
-<td bgcolor="#c4731c" id='H2'><span style="font-size:150%" draggable="true"><b>&#9817;</b></span></td>
-<td>2</td>
-</tr>
-<td>1</td>
-<td bgcolor="#c4731c" id='A1'><span style="font-size:150%" draggable="true"><b>&#9814;</b></span></td>
-<td id='B1'><span style="font-size:150%" draggable="true"><b>&#9816;</b></span></td>
-<td bgcolor="#c4731c" id='D1'><span style="font-size:150%" draggable="true"><b>&#9815;</b></span></td>
-<td id='D1'><span style="font-size:150%" draggable="true"><b>&#9813;</b></span></td>
-<td bgcolor="#c4731c" id='E1'><span style="font-size:150%" draggable="true"><b>&#9812;</b></span></td>
-<td id='F1'><span style="font-size:150%" draggable="true"><b>&#9815;</b></span></td>
-<td bgcolor="#c4731c" id='G1'><span style="font-size:150%" draggable="true"><b>&#9816;</b></span></td>
-<td id='H1'><span style="font-size:150%" draggable="true"><b>&#9814;</b></span></td>
-<td>1</td>
+<td >4</td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='A4'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='B4'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='C4'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D4'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='E4'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='F4'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='G4'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='H4'></td>
+<td >4</td>
 </tr>
 <tr>
-<td></td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td></td>
+<td >3</td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='A3'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='B3'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='C3'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='D3'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='E3'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='F3'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='G3'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='H3'></td>
+<td >3</td>
+</tr>
+<td >2</td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='A2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='B2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='C2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='E2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='F2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='G2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='H2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td >2</td>
+</tr>
+<td >1</td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='A1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9814;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='B1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9816;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9815;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='D1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9813;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='E1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9812;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='F1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9815;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='G1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9816;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='H1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9814;</b></span></td>
+<td >1</td>
+</tr>
+<tr>
+<td ></td>
+<td >A</td>
+<td >B</td>
+<td >C</td>
+<td >D</td>
+<td >E</td>
+<td >F</td>
+<td >G</td>
+<td >H</td>
+<td ></td>
 </tr>
 </table></center>
 </body>
