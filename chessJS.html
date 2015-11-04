@@ -1,6 +1,10 @@
 <!DOCTYPE HTML>
 <head><title>Chess Engine</title>
 <style>
+img{
+	width:30px; 
+	height:30px;
+}
 td{
 	border: solid #c4731c 1px;
 	width: 45px;
@@ -12,23 +16,6 @@ td{
 </style>
 </head>
 <body>
-<script>
-function allow(event){
-    console.log(event);
-    event.preventDefault();
-}
-
-function drag(event){
-	event.dataTransfer.setData("text", event.target.id);
-}
-
-function drop(event){
-	event.preventDefault();
-	var data=event.dataTransfer.getData("text");
-	event.target.appendChild(O(data));
-}
-</script>
-
 <center><h1 style="font-family:Arial; color:Blue">Play chess with yourself!</h1></center>
 <br>
 <center><table style="border:solid #c4731c 1px" cellspacing = 0px>
@@ -47,27 +34,27 @@ function drop(event){
 <tr>
 <tr>
 <td >8</td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='A8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9820;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='B8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9822;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='C8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9821;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9818;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='E8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9819;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='F8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9821;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='G8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9822;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='H8'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9820;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='A8'><img id='blackrookA8' src="C:\Users\Kyle\Desktop\Chess_Engine\black_rook.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='B8'><img id='blackknightB8' src="C:\Users\Kyle\Desktop\Chess_Engine\black_knight.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='C8'><img id='blackbishopC8' src="C:\Users\Kyle\Desktop\Chess_Engine\black_bishop.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D8'><img id='blackqueenD8' src="C:\Users\Kyle\Desktop\Chess_Engine\black_queen.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='E8'><img id='blackkingE8' src="C:\Users\Kyle\Desktop\Chess_Engine\black_king.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='F8'><img id='blackbishopF8' src="C:\Users\Kyle\Desktop\Chess_Engine\black_bishop.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='G8'><img id='blackknightG8' src="C:\Users\Kyle\Desktop\Chess_Engine\black_knight.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='H8'><img id='blackrookH8' src="C:\Users\Kyle\Desktop\Chess_Engine\black_rook.png" draggable='true' ondragstart='drag(event)'></td>
 <td >8</td>
 </tr>
 <tr>
 <tr>
 <td >7</td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='A7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='B7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='C7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='D7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='E7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='F7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='G7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='H7'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9823;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='A7'><img id='blackpawnA7' src="C:\Users\Kyle\Desktop\Chess_Engine\black_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='B7'><img id='blackpawnB7' src="C:\Users\Kyle\Desktop\Chess_Engine\black_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='C7'><img id='blackpawnC7' src="C:\Users\Kyle\Desktop\Chess_Engine\black_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='D7'><img id='blackpawnD7' src="C:\Users\Kyle\Desktop\Chess_Engine\black_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='E7'><img id='blackpawnE7' src="C:\Users\Kyle\Desktop\Chess_Engine\black_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='F7'><img id='blackpawnF7' src="C:\Users\Kyle\Desktop\Chess_Engine\black_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='G7'><img id='blackpawnG7' src="C:\Users\Kyle\Desktop\Chess_Engine\black_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='H7'><img id='blackpawnH7' src="C:\Users\Kyle\Desktop\Chess_Engine\black_pawn.png" draggable='true' ondragstart='drag(event)'></td>
 <td >7</td>
 </tr>
 <td >6</td>
@@ -119,25 +106,25 @@ function drop(event){
 <td >3</td>
 </tr>
 <td >2</td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='A2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='B2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='C2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='E2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='F2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='G2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='H2'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9817;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='A2'><img id='whitepawnA2' src="C:\Users\Kyle\Desktop\Chess_Engine\white_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='B2'><img id='whitepawnB2' src="C:\Users\Kyle\Desktop\Chess_Engine\white_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='C2'><img id='whitepawnC2' src="C:\Users\Kyle\Desktop\Chess_Engine\white_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D2'><img id='whitepawnD2' src="C:\Users\Kyle\Desktop\Chess_Engine\white_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='E2'><img id='whitepawnE2' src="C:\Users\Kyle\Desktop\Chess_Engine\white_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='F2'><img id='whitepawnF2' src="C:\Users\Kyle\Desktop\Chess_Engine\white_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='G2'><img id='whitepawnG2' src="C:\Users\Kyle\Desktop\Chess_Engine\white_pawn.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='H2'><img id='whitepawnH2' src="C:\Users\Kyle\Desktop\Chess_Engine\white_pawn.png" draggable='true' ondragstart='drag(event)'></td>
 <td >2</td>
 </tr>
 <td >1</td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='A1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9814;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='B1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9816;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='D1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9815;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='D1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9813;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='E1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9812;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='F1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9815;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='G1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9816;</b></span></td>
-<td ondragover='allow(event)' ondrop='drop(event)' id='H1'><span style="font-size:150%" draggable="true" ondragstart='drag(event)'><b>&#9814;</b></span></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='A1'><img id='whiterookA1' src="C:\Users\Kyle\Desktop\Chess_Engine\white_rook.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='B1'><img id='whiteknightB1' src="C:\Users\Kyle\Desktop\Chess_Engine\white_knight.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='C1'><img id='whitebishopC1' src="C:\Users\Kyle\Desktop\Chess_Engine\white_bishop.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='D1'><img id='whitequeenD1' src="C:\Users\Kyle\Desktop\Chess_Engine\white_queen.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='E1'><img id='whitekingE1' src="C:\Users\Kyle\Desktop\Chess_Engine\white_king.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='F1'><img id='whitebishop' src="C:\Users\Kyle\Desktop\Chess_Engine\white_bishop.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' bgcolor="#c4731c" id='G1'><img id='whiteknightG1' src="C:\Users\Kyle\Desktop\Chess_Engine\white_knight.png" draggable='true' ondragstart='drag(event)'></td>
+<td ondragover='allow(event)' ondrop='drop(event)' id='H1'><img id='whiterookH1' src="C:\Users\Kyle\Desktop\Chess_Engine\white_rook.png" draggable='true' ondragstart='drag(event)'></td>
 <td >1</td>
 </tr>
 <tr>
@@ -153,6 +140,22 @@ function drop(event){
 <td ></td>
 </tr>
 </table></center>
+
+<script type="text/javascript">
+function allow(event){
+    event.preventDefault();
+}
+
+function drag(event){
+	event.dataTransfer.setData('image/png', event.target.id);
+}
+
+function drop(event){
+	event.preventDefault();
+	var data=event.dataTransfer.getData('image/png');
+	event.target.appendChild(document.getElementById(data));
+}
+</script>
 </body>
 
 </HTML>
